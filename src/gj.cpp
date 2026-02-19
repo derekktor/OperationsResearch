@@ -42,7 +42,7 @@ float &GJ::at(size_t i, size_t j) { return a[i * cols + j]; }
  * ...
  */
 void GJ::initializeVariables() {
-    std::cout << "Initializing variables...\n";
+    // std::cout << "Initializing variables...\n";
     for (size_t i = 0; i < cols - 1; i++) {
         Variable t;
         vars.push_back(t);
@@ -95,6 +95,7 @@ void GJ::print() {
     printVariables();
 
     // print matrix elements
+    std::cout << std::endl;
     for (size_t i = 0; i < rows; i++) {
         for (size_t j = 0; j < cols; j++) {
             std::cout << at(i, j) << "\t";
